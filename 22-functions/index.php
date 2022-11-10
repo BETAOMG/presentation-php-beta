@@ -2,7 +2,7 @@
 
 echo "<h2>Sintaxis sencilla de una funcion</h2>";
 
-function foo () /*:int*/
+function foo ()  /*:int|double*/
 {
     return 'Hola mundo';
 }

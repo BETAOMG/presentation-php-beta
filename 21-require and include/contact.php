@@ -12,12 +12,13 @@
     <?php
 
         ob_start();
-        require "./nav.php"; 
+        require "./nav.php";
         $nav = ob_get_clean();
 
         $nav = str_replace('About', 'About us', $nav);
 
         echo $nav;
+
      
     ?>
 

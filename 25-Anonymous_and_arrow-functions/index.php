@@ -25,14 +25,33 @@ $hacer('Prueba de funcion hacerhecho');
 
 echo '<h2>Callable</h2>';
 
-function sub(int|float ...$numbers) :int|float {
-    return array_sum($numbers);
+function sub(string $operacion , int ...$numbers) :int|float {
+    switch ($operacion){
+        case "suma":
+            return array_sum($numbers);
+        case "resta":
+            $result = 0;
+            foreach ($numbers as $number){
+                $result = $result - $number;
+            }
+            return $result;
+        case "multiplicacion":
+            $result = 1;
+            foreach ($numbers as $number){
+                $result = $result * $number;
+            }
+            return $result;
+        default:
+            return 0;
+    }
 }
 
-$x = 'sum';
+echo sub("multiplicacion", 3, 2, 1, 7, 5, 9, 5.0);
+
+$x = 'sub';
 
 if (is_callable($x)){
-    echo $x(1, 2, 3, 4);
+    echo $x("suma", 1, 2, 3, 4);
 }else{
     echo 'Not callable <br>';
 }

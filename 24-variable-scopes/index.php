@@ -8,11 +8,15 @@ include ('script.php');
 
 echo '<br>'.$x;
 
+
+
 echo '<h2>Variable en funcion</h2>';
 
 function test($a){
     echo $a; /*referencia a una variable en el ambito local*/
 }
+
+$a=1;
 
 test($a);
 
@@ -35,6 +39,8 @@ function suma2(){
     return $GLOBALS['a'] + $GLOBALS['b'];
 }
 
+
+
 echo suma2();
 
 echo '<h2>Variables predefinidas</h2>';
@@ -50,6 +56,7 @@ function test_global(){
 echo '<h2>Variables static</h2>';
 echo '<h4>Sin static</h4>';
 function statics(){
+
     $a = 0;
     echo $a;
     $a++;

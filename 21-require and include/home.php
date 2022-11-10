@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <?php require "./nav.php"; ?>
+    <?php require "./nav.php";?>
     <h1><?php echo $title; ?></h1>
     <p>Este es el contenido de la pagina de <?php echo $title; ?></p>
     <footer>
